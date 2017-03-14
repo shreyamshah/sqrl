@@ -19,7 +19,7 @@ $conn= mysqli_connect("localhost:3306","shreyam","shreyam","sqrl");
   }
   else {
   		echo "<br/>Entered data successfully\n";
-        header('location: localhost://SQRL/home.php');
+        header('Location: localhost://SQRL/home.php');
   }
    mysqli_close($conn);
 
