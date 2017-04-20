@@ -2,31 +2,29 @@
 <html>
 <head>
 <title>Home|SQRL</title>
-<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/paper/bootstrap.min.css" rel="stylesheet" integrity="sha384-awusxf8AUojygHf2+joICySzB780jVvQaVCAt1clU3QsyAitLGul28Qxb2r1e5g+" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/CSSPlugin.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/easing/EasePack.min.js"></script>
-<style>
-#vim {
-	position:relative;
-}
-#ok {
-	padding:8px;
-	background-color:red;
-}
+
 </style>
 </head>
 <body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
 <?php
-include 'nav.php';
+include "nav.php";
+if(isset($_GET['done'])&&$_GET['done']=='true')
+{
+  echo '<script>Materialize.toast("You have Sucessfully Registered!", 3000, "rounded");Materialize.toast("Now click on Login to Login!",3000,"rounded");</script>';
+}
 ?><!-- 
 <div id="ok">
 <button id="vim">hi</button></div> -->
-<script>
+<!--<script>
 window.onload = function() {
 	var vim=document.getElementById("vim");
 	TweenLite.to(vim, 5, {transform:rotate(20deg)});
 }
-</script>
+</script>-->
 </body>
 </html>
